@@ -65,3 +65,6 @@ group :test do
 end
 
 gem "solidus", github: "solidusio/solidus"
+gem "solidus_admin", github: "solidusio/solidus"
+
+gem "tailwindcss-rails", "~> 2.3"
