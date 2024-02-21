@@ -23,5 +23,32 @@ module Mystore
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Disable the build in css_compressor.
+    config.assets.css_compressor = nil
+
+    # Add support for Solidus testing support factories
+    if defined?(FactoryBotRails)
+      initializer after: "factory_bot.set_factory_paths" do
+        require "spree/testing_support/factory_bot"
+
+        # The paths for Solidus' core factories.
+        solidus_paths = Spree::TestingSupport::FactoryBot.definition_file_paths
+
+        # Optional: Any factories you want to require from extensions.
+        extension_paths = [
+          # MySolidusExtension::Engine.root.join("lib/my_solidus_extension/testing_support/factories"),
+          # or individually:
+          # MySolidusExtension::Engine.root.join("lib/my_solidus_extension/testing_support/factories/resource.rb"),
+        ]
+
+        # Your application's own factories.
+        app_paths = [
+          Rails.root.join("test/factories")
+        ]
+
+        FactoryBot.definition_file_paths = solidus_paths + extension_paths + app_paths
+      end
+    end
   end
 end
