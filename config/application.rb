@@ -23,5 +23,8 @@ module Mystore
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Disable the build in css_compressor.
+    config.assets.css_compressor = nil
   end
 end
