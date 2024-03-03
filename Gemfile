@@ -66,7 +66,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "solidus", github: "solidusio/solidus"
-gem "solidus_admin", github: "solidusio/solidus"
+gem "solidus", github: "solidusio/solidus", branch: "main"
+gem "solidus_admin", github: "solidusio/solidus", branch: "main"
 
 gem "tailwindcss-rails", "~> 2.3"
