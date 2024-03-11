@@ -50,5 +50,10 @@ module Mystore
         FactoryBot.definition_file_paths = solidus_paths + extension_paths + app_paths
       end
     end
+
+    config.generators do |generator|
+      generator.factory_bot false
+    end
+
   end
 end
