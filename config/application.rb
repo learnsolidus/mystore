@@ -54,6 +54,5 @@ module Mystore
     config.generators do |generator|
       generator.factory_bot false
     end
-
   end
 end

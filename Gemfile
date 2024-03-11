@@ -25,7 +25,7 @@ gem "redis", ">= 4.0.1"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -70,3 +70,5 @@ gem "solidus", github: "solidusio/solidus", branch: "main"
 gem "solidus_admin", github: "solidusio/solidus", branch: "main"
 
 gem "tailwindcss-rails", "~> 2.3"
+
+gem "authentication-zero", "~> 3.0"
