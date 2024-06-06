@@ -69,4 +69,4 @@ end
 gem "solidus", github: "solidusio/solidus", branch: "main"
 gem "solidus_admin", github: "solidusio/solidus", branch: "main"
 
-gem "tailwindcss-rails", "~> 2.3"
+gem "tailwindcss-rails", "~> 2.6"
